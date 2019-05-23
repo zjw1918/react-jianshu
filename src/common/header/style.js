@@ -42,23 +42,8 @@ color: #333;
 }
 `
 export const SearchWrapper = styled.div`
-// background: red;
 float: left;
 position: relative;
-
-.slide-enter {
-  transition: width .2s ease-out;
-}
-.slide-enter-active {
-  width: 240px;
-}
-
-.slide-exit {
-  transition: width .2s ease-out;
-}
-.slide-exit-active {
-  width: 160px;
-}
 
 .iconfont {
   position: absolute;
@@ -96,6 +81,20 @@ color: #666;
 }
 &.focused {
   width: 240px;
+}
+
+&.slide-enter {
+  transition: all .2s ease-out;
+}
+&.slide-enter-active {
+  width: 240px;
+}
+
+&.slide-exit {
+  transition: all .2s ease-out;
+}
+&.slide-exit-active {
+  width: 160px;
 }
 `
 

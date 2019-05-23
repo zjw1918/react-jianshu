@@ -1,0 +1,1 @@
+export const ACTION_INPUT_FOCUSED = 'header/input_focused';
