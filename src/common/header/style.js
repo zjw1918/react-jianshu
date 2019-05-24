@@ -98,6 +98,50 @@ color: #666;
 }
 `
 
+export const SearchInfo = styled.div`
+position: absolute;
+left: 0;
+top: 56px;
+width: 240px;
+// height: 100px;
+padding: 0 20px;
+box-shadow: 0 0 8px rgba(0,0,0,.2)
+`
+
+export const SearchInfoTitle = styled.div`
+color: #969696;
+margin-top: 20px;
+margin-bottom: 15px;
+line-height: 20px;
+font-size: 14px;
+`
+
+export const SearchInfoSwitch = styled.div`
+float: right;
+// color: #969696;
+// margin-top: 20px;
+// margin-bottom: 15px;
+// line-height: 20px;
+font-size: 13px;
+`
+
+export const SearchInfoItemWrapper = styled.div`
+// display: hidden;
+`
+
+export const SearchInfoItem = styled.a`
+display: block;
+float: left;
+line-height: 20px;
+border: 1px solid #ddd;
+border-radius: 4px;
+font-size: 12px;
+color: #787878;
+padding: 0 5px;
+margin-right: 10px;
+margin-bottom: 12px;
+`
+
 export const Addition = styled.div`
 position: absolute;
 right: 0;

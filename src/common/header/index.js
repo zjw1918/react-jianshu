@@ -5,10 +5,45 @@ import {
   HeaderWrapper, Logo,
   Nav, NavItem, NavSearch,
   Addition, Button, SearchWrapper,
+  SearchInfo, SearchInfoTitle, SearchInfoSwitch, SearchInfoItem, SearchInfoItemWrapper
 } from './style';
 
 import { CSSTransition } from 'react-transition-group';
 import { actionCreators } from './store';
+
+const getSearchInfo = (show) => {
+  if (!show) return null
+  return (
+    <SearchInfo>
+    <SearchInfoTitle>
+      热门搜索
+      <SearchInfoSwitch>换一批</SearchInfoSwitch>
+    </SearchInfoTitle>
+
+    <SearchInfoItemWrapper>
+      <SearchInfoItem>教育</SearchInfoItem>
+      <SearchInfoItem>教育</SearchInfoItem>
+      <SearchInfoItem>教育</SearchInfoItem>
+      <SearchInfoItem>教育</SearchInfoItem>
+      <SearchInfoItem>教育</SearchInfoItem>
+      <SearchInfoItem>教育</SearchInfoItem>
+      <SearchInfoItem>教育</SearchInfoItem>
+      <SearchInfoItem>教育</SearchInfoItem>
+      <SearchInfoItem>教育</SearchInfoItem>
+      <SearchInfoItem>教育</SearchInfoItem>
+      <SearchInfoItem>教育</SearchInfoItem>
+      <SearchInfoItem>教育</SearchInfoItem>
+      <SearchInfoItem>教育</SearchInfoItem>
+      <SearchInfoItem>教育</SearchInfoItem>
+      <SearchInfoItem>教育</SearchInfoItem>
+      <SearchInfoItem>教育</SearchInfoItem>
+      <SearchInfoItem>教育</SearchInfoItem>
+      <SearchInfoItem>教育</SearchInfoItem>
+      <SearchInfoItem>教育</SearchInfoItem>
+    </SearchInfoItemWrapper>
+  </SearchInfo>
+  )
+}
 
 const Header = (props) => {
   return (
@@ -31,6 +66,8 @@ const Header = (props) => {
               onFocus={() => props.handleInputFocused(true)}
               onBlur={() => props.handleInputFocused(false)} />
           </CSSTransition>
+
+          {getSearchInfo(props.focused)}
           <i className={props.focused ? 'iconfont focused' : 'iconfont'}>&#xe637;</i>
         </SearchWrapper>
         <Addition>
