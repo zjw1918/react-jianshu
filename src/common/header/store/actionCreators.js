@@ -2,6 +2,11 @@ import * as constants from "./constants";
 import axios from 'axios'
 import { fromJS } from "immutable";
 
+const populateHotItems = (list) => ({
+  type: constants.ACTION_POPUL_HOTITEMS,
+  list: fromJS(list),
+})
+
 export const searchFocus = () => ({
   type: constants.ACTION_SEARCH_FOCUS,
 })
@@ -22,7 +27,14 @@ export const getHotItems = () => {
   }
 }
 
-export const populateHotItems = (list) => ({
-  type: constants.ACTION_POPUL_HOTITEMS,
-  list: fromJS(list),
+export const mouseIn = (enter) => ({
+  type: constants.ACTION_MOUSEIN,
+  enter
 })
+
+export const switchList = (pageIndex) => ({
+  type: constants.ACTION_SWITCHLIST,
+  pageIndex
+})
+
+
