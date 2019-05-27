@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 import {
   HeaderWrapper, Logo,
@@ -53,11 +54,13 @@ class Header extends Component {
     const { focused, list, handleInputBlur, handleInputFocus } = this.props;
     return (
       <HeaderWrapper>
-        <Logo href='/' />
+        <Link to='/'><Logo href='/' /></Link>
         <Nav>
           <NavItem className='left active'>首页</NavItem>
           <NavItem className='left'>下载App</NavItem>
-          <NavItem className='right'>登录</NavItem>
+          <Link to='/login'>
+            <NavItem className='right'>登录</NavItem>
+          </Link>
           <NavItem className='right'>
             <i className='iconfont'>&#xe636;</i>
           </NavItem>

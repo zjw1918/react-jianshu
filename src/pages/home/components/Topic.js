@@ -1,8 +1,13 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import { TopicWrapper, TopicItem } from "../style";
 import { connect } from "react-redux";
+import { actionCreators } from "../store";
 
-class Topic extends Component {
+class Topic extends PureComponent {
+  componentDidMount() {
+    this.props.handleFetchTopicList()
+  }
+
   render() {
     return (
       <TopicWrapper>
@@ -11,7 +16,7 @@ class Topic extends Component {
             return (
               <TopicItem key={item.get('id')}>
                 <img className='topic-pic' alt='' src={item.get('imgUrl')} />
-                {item.get('topic')}
+                {item.get('title')}
               </TopicItem>
             )
           })
@@ -27,5 +32,12 @@ const mapState = (state) => {
     topicList: state.getIn(['home', 'topicList']),
   }
 }
+const mapDispatch = (dispatch) => {
+  return {
+    handleFetchTopicList() {
+      dispatch(actionCreators.fetchTopicList())
+    }
+  }
+}
 
-export default connect(mapState, null)(Topic)
+export default connect(mapState, mapDispatch)(Topic)

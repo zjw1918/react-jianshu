@@ -24,6 +24,7 @@ export const TopicWrapper = styled.div`
 padding: 20px 0 10px 0;
 overflow: hidden;
 margin-left: -18px;
+border-bottom: 1px solid #f0f0f0;
 `
 
 export const TopicItem = styled.div`
@@ -45,8 +46,44 @@ border-radius: 4px;
   display: block;
   float: left;
   margin-right: 10px;
-
 }
+`
+
+export const ItemWrapper = styled.div`
+overflow: hidden;
+margin: 0 0 15px;
+padding: 15px 2px 20px 0;
+border-bottom: 1px solid #f0f0f0;
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  float: right;
+  width: 150px;
+  height: 100px;
+}
+`
+export const ItemLeft = styled.div`
+width: 458px;
+float: left;
+`
+export const Title = styled.span`
+font-size: 18px;
+line-height: 1.5;
+color: #333;
+font-weight:bold;
+`
+export const Desc = styled.div`
+color: #999;
+line-height: 24px;
+font-size: 13px;
+margin: 0 0 8px;
 
 `
 

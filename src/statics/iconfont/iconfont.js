@@ -12,12 +12,12 @@ export const GlobalIconFont = createGlobalStyle`;
 
 @font-face {
   font-family: 'iconfont';  /* project id 1207030 */
-  src: url('//at.alicdn.com/t/font_1207030_btdh0xkh3vo.eot');
-  src: url('//at.alicdn.com/t/font_1207030_btdh0xkh3vo.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_1207030_btdh0xkh3vo.woff2') format('woff2'),
-  url('//at.alicdn.com/t/font_1207030_btdh0xkh3vo.woff') format('woff'),
-  url('//at.alicdn.com/t/font_1207030_btdh0xkh3vo.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_1207030_btdh0xkh3vo.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_1207030_grq52luz3i6.eot');
+  src: url('//at.alicdn.com/t/font_1207030_grq52luz3i6.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1207030_grq52luz3i6.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1207030_grq52luz3i6.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1207030_grq52luz3i6.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1207030_grq52luz3i6.svg#iconfont') format('svg');
 }
 
 .iconfont {

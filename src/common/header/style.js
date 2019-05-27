@@ -7,7 +7,7 @@ height: 56px;
 border-bottom: 1px solid #f0f0f0;
 `
 
-export const Logo = styled.a`
+export const Logo = styled.div`
 position: absolute;
 top: 0;
 left: 0;
@@ -103,9 +103,9 @@ position: absolute;
 left: 0;
 top: 56px;
 width: 240px;
-// height: 100px;
 padding: 0 20px;
-box-shadow: 0 0 8px rgba(0,0,0,.2)
+box-shadow: 0 0 8px rgba(0,0,0,.2);
+background: #fff;
 `
 
 export const SearchInfoTitle = styled.div`

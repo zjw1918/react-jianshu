@@ -1,0 +1,1 @@
+export const ACTION_POPULATE_DETAIL = 'detail/ACTION_POPULATE_DETAIL';
