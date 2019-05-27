@@ -49,10 +49,16 @@ line-height: 50px;
 border: 1px solid #c8c8c8;
 box-sizing: border-box;
 margin: 0 0 -1px -1px;
+text-align: left;
 
 background-color: hsla(0,0%,71%,.1);
-padding: 0 10px;
+
+display: flex;
+align-items: center;
+
 i {
+    width: 10%
+    margin: 0 10px;
     color: #969696;
     font-size: 20px;
 }
@@ -66,5 +72,6 @@ outline: none;
 border: none;
 background: transparent;
 font-size: 14px;
+
 `
 

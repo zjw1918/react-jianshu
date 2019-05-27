@@ -12,10 +12,12 @@ class Login extends PureComponent {
 
           <InputArea>
             <InputWrapper className='input-wrapper'>
-              <i className='iconfont'>&#xe604;</i> <Input placeholder='手机号或邮箱' />
+              <i className='iconfont'>&#xe604;</i> 
+              <Input placeholder='手机号或邮箱' />
             </InputWrapper>
             <InputWrapper className='input-wrapper'>
-              <i className='iconfont'>&#xe620;</i> <Input placeholder='密码'/>
+              <i className='iconfont'>&#xe620;</i> 
+              <Input placeholder='密码'/>
             </InputWrapper>
           </InputArea>
         </LoginMain>
