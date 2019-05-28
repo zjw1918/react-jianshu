@@ -11,6 +11,7 @@ import {
 
 import { CSSTransition } from 'react-transition-group';
 import { actionCreators } from './store';
+import { actionCreators as loginActionCreators } from '../../pages/login/store';
 
 
 class Header extends Component {
@@ -51,16 +52,22 @@ class Header extends Component {
   }
 
   render() {
-    const { focused, list, handleInputBlur, handleInputFocus } = this.props;
+    const { focused, list, handleInputBlur, isLogin, handleInputFocus, handleLogout } = this.props;
     return (
       <HeaderWrapper>
         <Link to='/'><Logo href='/' /></Link>
         <Nav>
           <NavItem className='left active'>首页</NavItem>
           <NavItem className='left'>下载App</NavItem>
-          <Link to='/login'>
-            <NavItem className='right'>登录</NavItem>
-          </Link>
+          {
+            isLogin ? (
+              <NavItem className='right' onClick={handleLogout}>登出</NavItem>
+            ) : (
+              <Link to='/login'>
+                <NavItem className='right'>登录</NavItem>
+              </Link>
+            )
+          }
           <NavItem className='right'>
             <i className='iconfont'>&#xe636;</i>
           </NavItem>
@@ -79,7 +86,7 @@ class Header extends Component {
             <i className={focused ? 'iconfont zoom focused' : 'iconfont zoom'}>&#xe637;</i>
           </SearchWrapper>
           <Addition>
-            <Button className='writing'>写文章</Button>
+            <Link to='/write'><Button className='writing'>写文章</Button></Link>
             <Button className='reg'>注册</Button>
           </Addition>
         </Nav>
@@ -95,6 +102,7 @@ const mapStateToProps = (state) => {
     mouseIn: state.getIn(['header', 'mouseIn']),
     pageIndex: state.getIn(['header', 'pageIndex']),
     totalPage: state.getIn(['header', 'totalPage']),
+    isLogin: state.getIn(['login', 'isLogin']),
   }
 }
 
@@ -117,9 +125,11 @@ const mapDispatchToProps = (dispatch) => {
       } else {
         angle = 0
       }
-      
       icon.style.transform = 'rotate(' + (angle + 360) + 'deg)'
       dispatch(actionCreators.switchList(pageIndex < totalPage-1 ? pageIndex + 1 : 0))
+    },
+    handleLogout() {
+      dispatch(loginActionCreators.logout())
     }
   }
 }

@@ -1,0 +1,2 @@
+export const ACTION_CHANGE_LOGIN = 'login/ACTION_CHANGE_LOGIN'
+export const ACTION_LOGOUT = 'login/ACTION_LOGOUT'

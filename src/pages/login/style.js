@@ -7,7 +7,6 @@ min-height: 750px;
 height: 100%;
 text-align: center;
 font-size: 14px;
-// padding-top: 60px;
 `
 export const LoginMain = styled.div`
 width: 400px;
@@ -72,6 +71,19 @@ outline: none;
 border: none;
 background: transparent;
 font-size: 14px;
-
 `
 
+export const LoginBtn = styled.div`
+margin-top: 20px;
+width: 100%;
+height: 43px;
+background: #3194d0;
+border-radius: 25px;
+color: #fff;
+font-size: 18px;
+line-height: 43px;
+cursor: pointer;
+:hover {
+    background: #327ab7;
+}
+`

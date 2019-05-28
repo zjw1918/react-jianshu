@@ -1,4 +1,5 @@
 import React, { PureComponent } from "react";
+import { withRouter } from 'react-router-dom'
 import {
   DetailWrapper, Title, Content, Spacer
 } from "./style";
@@ -7,6 +8,8 @@ import { actionCreators } from "./store";
 
 class Detail extends PureComponent {
   componentDidMount() {
+    console.log(this.props.match.params);
+    
     const { id } = this.props.match.params
     this.props.handleFetchDetail(id)
   }
@@ -40,4 +43,4 @@ const mapDispatch = (dispatch) => {
   }
 }
 
-export default connect(mapState, mapDispatch)(Detail)
+export default connect(mapState, mapDispatch)(withRouter(Detail))

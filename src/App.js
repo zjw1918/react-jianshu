@@ -1,12 +1,13 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import Header from './common/header'
 import { Provider } from 'react-redux'
 import { BrowserRouter, Route } from 'react-router-dom'
 import styled from 'styled-components'
 
-import Home from './pages/home';
-import Detail from './pages/detail';
-import Login from './pages/login';
+import Home from './pages/home'
+import Detail from './pages/detail/loadable'
+import Login from './pages/login'
+import write from './pages/write'
 
 import store from './store'
 
@@ -64,6 +65,7 @@ class App extends Component {
           <Route path='/' exact component={Home} />
           <Route path='/detail/:id' exact component={Detail} />
           <Route path='/login' exact component={Login} />
+          <Route path='/write' exact component={write} />
         </BrowserRouter>
         {
           this.state.show ? (
