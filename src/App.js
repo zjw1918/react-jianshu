@@ -13,7 +13,6 @@ import Login from './pages/login'
 import write from './pages/write'
 
 class App extends Component {
-
   render() {
     return (
       <Provider store={store}>

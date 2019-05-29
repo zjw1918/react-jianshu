@@ -6,7 +6,8 @@ import {
   ItemWrapper,
   Title,
   Desc,
-  ItemLeft
+  ItemInfo,
+  LoadMore
 } from '../style'
 import { actionCreators } from "../store";
 
@@ -16,7 +17,7 @@ class List extends PureComponent {
   }
 
   render() {
-    const { list } = this.props
+    const { list, page, handleLoadMore } = this.props
 
     return (
       <div>
@@ -24,19 +25,19 @@ class List extends PureComponent {
           list.map((item, index) => {
             return (
               <ItemWrapper key={index}>
-                <ItemLeft>
+                <ItemInfo>
                   <Link to={'/detail/' + index}>
                     <Title>{item.get('title')}</Title>
                   </Link>
                   <Desc>{item.get('desc')}</Desc>
-                </ItemLeft>
+                </ItemInfo>
 
                 <img alt='' src={item.get('imgUrl')} />
               </ItemWrapper>
             )
           })
         }
-
+        <LoadMore onClick={() => handleLoadMore(page)}>阅读更多</LoadMore>
       </div>
     )
   }
@@ -45,13 +46,17 @@ class List extends PureComponent {
 const mapState = (state) => {
   return {
     list: state.getIn(['home', 'list']),
+    page: state.getIn(['home', 'page']),
   }
 }
 const mapDispatch = (dispatch) => {
   return {
     handleFetchList() {
       dispatch(actionCreators.fetchList())
-    }
+    },
+    handleLoadMore(page) {
+      dispatch(actionCreators.loadMore(page))
+    },
   }
 }
 

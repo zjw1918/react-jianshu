@@ -69,7 +69,7 @@ img {
   height: 100px;
 }
 `
-export const ItemLeft = styled.div`
+export const ItemInfo = styled.div`
 width: 458px;
 float: left;
 `
@@ -79,12 +79,26 @@ line-height: 1.5;
 color: #333;
 font-weight:bold;
 `
+
 export const Desc = styled.div`
 color: #999;
 line-height: 24px;
 font-size: 13px;
 margin: 0 0 8px;
-
 `
 
+export const LoadMore = styled.div`
+width: 100%,
+height: 40px;
+line-height: 40px;
+text-align: center;
+color: #fff;
+border-radius: 20px;
+background-color: #a5a5a5;
+margin: 20px 0;
+cursor: pointer;
 
+:hover {
+  background-color: #9b9b9b;
+}
+`

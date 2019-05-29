@@ -21,9 +21,9 @@ class GoTop extends PureComponent {
 
   handleScrollChange() {
     if (window.document.documentElement.scrollTop < 200) {
-      this.setState({ show: false })
+      this.setState(() => ({ show: false }))
     } else {
-      this.setState({ show: true })
+      this.setState(() => ({ show: true }))
     }
   }
 
